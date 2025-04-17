@@ -1,0 +1,54 @@
+
+/* Base styles reset - removes unwanted margins and padding */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Allow the app to take full height */
+html, body, #root {
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Ensure content doesn't exceed boundaries */
+img, video {
+  max-width: 100%;
+  display: block;
+}
+
+/* Global focus styles for accessibility */
+:focus {
+  outline: 2px solid #8B5CF6;
+  outline-offset: 2px;
+}
+
+/* Give the app a nice centered feel without excess padding */
+#root {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Fix for white space issues in all pages */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Glassmorphism effect for cards */
+.glassmorphism-card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 8px 32px rgba(31, 38, 135, 0.1);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+.glassmorphism-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(31, 38, 135, 0.15);
+}
