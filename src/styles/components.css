@@ -1,0 +1,86 @@
+
+@tailwind components;
+
+@layer components {
+  /* Navigation */
+  .nav-link {
+    @apply relative px-2 py-1 transition-all duration-300 hover:text-[#864cc6];
+  }
+
+  .nav-link::after {
+    @apply content-[''] absolute left-0 bottom-0 w-0 h-[2px] bg-[#864cc6] transition-all duration-300;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+  
+  /* Layout Components */
+  .section-padding {
+    @apply py-16 px-4 md:py-24 md:px-8;
+  }
+
+  /* Card Components */
+  .shadow-card {
+    @apply shadow-md hover:shadow-xl transition-shadow duration-300;
+  }
+
+  .glass-card {
+    @apply bg-white/10 backdrop-blur-md border border-white/20 rounded-xl;
+  }
+
+  .card {
+    @apply bg-white rounded-lg shadow-md hover:shadow-lg transition-all duration-300 overflow-hidden;
+  }
+
+  .glassmorphism-card {
+    @apply bg-white shadow-md backdrop-blur-md border border-[#864cc6]/10 rounded-xl hover:shadow-lg transition-all duration-300;
+  }
+  
+  /* Button Components */
+  .btn-primary {
+    @apply px-6 py-3 bg-[#864cc6] text-white rounded-md hover:bg-[#864cc6]/90 transition-colors duration-300;
+  }
+
+  .btn-outline {
+    @apply px-6 py-3 border border-[#864cc6] text-[#864cc6] rounded-md hover:bg-[#864cc6] hover:text-white transition-colors duration-300;
+  }
+
+  /* Dropdown Components */
+  .dropdown-menu {
+    @apply absolute top-full mt-2 overflow-hidden z-50;
+  }
+
+  .dropdown-item {
+    @apply block p-4 hover:bg-[#864cc6]/10 transition-colors duration-200;
+  }
+  
+  /* Text Components */
+  .highlight-text {
+    @apply text-[#864cc6] font-medium;
+  }
+  
+  /* Hover Components */
+  .accent-hover {
+    @apply transition-colors duration-300;
+  }
+
+  .accent-hover:hover {
+    @apply text-[#864cc6];
+  }
+  
+  /* Animation for floating cards */
+  @keyframes float-card {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-8px); }
+  }
+  
+  .animate-float-card {
+    animation: float-card 3s ease-in-out infinite;
+  }
+  
+  /* Feature card styles */
+  .feature-card-content {
+    @apply opacity-100;
+  }
+}
